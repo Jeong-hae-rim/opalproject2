@@ -7,19 +7,6 @@
 	<title>main</title>
 </head>
 <style>
-/* ul {
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-
-li {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    border : 0;
-    float: left;
-} */
-
 .logo h1 {margin: 0 0 0 0; width: 65%; height:65%; background-color:#F5A9BC;float:left;}
 .main_nav{width:100%; height:30%;background-color:#ECCEF5; float:left;}
 .top_nav{width: 35%; height:65%; padding-margin:auto; background-color:grey; float:right;}
