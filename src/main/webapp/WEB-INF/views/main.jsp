@@ -77,8 +77,9 @@
 	<!--main navbar 끝-->
 	
 	<section>
-	<div class="word_cloud">
-	<div class="word_inner"> 여기 워드 클라우드 </div>
+	<div class="word_ranking">
+	<div class="word_inner"> 여기 워드 클라우드 </div> <!--워드 클라우드 끝-->
+	<div class="ranking_inner">여기 랭킹</div> <!--랭킹 끝-->
 	</div>
 	<!--워드 클라우드 박스 끝-->
 	
@@ -94,11 +95,10 @@
 	</div>
 	<!--검색창 끝-->
 	
-	<div class="map_ranking">
-	<div class="map_inner">여기 맵</div> <!--맵 끝-->
-	<div class="ranking_inner">여기 랭킹</div> <!--랭킹 끝-->
+	<div class="map">
+	<div class="map_inner">여기 맵</div>
 	</div>
-	<!--맵&랭킹 끝-->
+	<!--맵 끝-->
 	
 	<br><br>
 	<hr>

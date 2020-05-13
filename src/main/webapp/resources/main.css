@@ -13,11 +13,13 @@ body{margin: auto;}
 .top_nav li {float: left;padding: 0 15px;list-style: none;}
 .top_nav a {line-heigt: 75px;}
 
-.word_cloud {height : 300px; padding : 20px;}.word_inner {background-color:#BDBDBD; width:80%; height:100%; margin:auto;}
+.word_ranking {height : 400px; padding-top:50px; padding-right : 100px; padding-left : 100px;}.word_inner {background-color:#BDBDBD; width:65%; height:100%; float:left;}
+.ranking_inner {background-color:#cc99ff; width:30%; height:100%; float:right;}
+
 .search_box{width : 100%; height:100px} .search_inner {width: 85%; height: 50%; margin:auto;}
 
-.map_ranking {height : 400px; padding-right : 100px; padding-left : 100px;}.map_inner {background-color:#99ccff; width:65%; height:100%; float:left;}
-.ranking_inner {background-color:#cc99ff; width:30%; height:100%; float:right;}
+.map {height : 400px; padding-right : 100px; padding-left : 100px;}.map_inner {background-color:#99ccff; height:100%; margin:auto;}
+
 
 .graph {height : 400px; padding-right : 100px; padding-left : 100px;}.graph_one {background-color:#99ccff; width:45%; height:100%; float:left;}
 .graph_two {background-color:#cc99ff; width:45%; height:100%; float:right;}
