@@ -6,10 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 	
-	@RequestMapping(value="/main2")
+	@RequestMapping(value="/main")
 	public String main() {
 		
 		return  "main";
+	}
+	
+	@RequestMapping(value="/about")
+	public String about() {
+		
+		return  "about";
 	}
 
 }
