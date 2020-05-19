@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="my.project.opal">
+	<logger name="my.spring.opalproject">
 		<level value="info" />
 	</logger>
 	
