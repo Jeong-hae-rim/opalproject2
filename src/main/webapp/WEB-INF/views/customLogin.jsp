@@ -47,7 +47,7 @@
 									<li class="nav-item"><a class="nav-link"
 										style="font-size: 12px;" href="/opalproject/customLogin">로그인</a></li>
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="/opalproject/entrance">회원가입</a></li>
+										style="font-size: 12px;" href="/opalproject/signUp">회원가입</a></li>
 									<li class="nav-item"><a class="nav-link"
 										style="font-size: 12px;" href="#">고객센터</a></li>
 								</ul>

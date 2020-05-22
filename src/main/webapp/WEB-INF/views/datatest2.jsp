@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,7 +45,7 @@
 					margin:10,
 					loop:true,
           nav:true,
-          navText:['ÀÌÀü','´ÙÀ½'],					
+          navText:['ì´ì „','ë‹¤ìŒ'],					
 					autoplay:true,
           autoplayTimeout:3000,
           autoplayHoverPause:true

@@ -1,12 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>¼Ò°³</title>
+<meta>
+<title>ì†Œê°œ</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -40,9 +40,9 @@
 
 							<div class="collapse navbar-collapse" id="navbarColor03">
 								<ul class="navbar-nav mr-auto">
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">·Î±×ÀÎ</a></li>
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">È¸¿ø°¡ÀÔ</a></li>
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">°í°´¼¾ÅÍ</a></li>
+									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">ë¡œê·¸ì¸</a></li>
+									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">íšŒì›ê°€ìž…</a></li>
+									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">ê³ ê°ì„¼í„°</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 	</header>
-	<!--header ³¡-->
+	<!--header ë-->
 
 	<div class="bs-component2">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,36 +59,36 @@
 				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<!--°Çµå¸®Áö ¸¶¼¼¿ä.-->
+			<!--ê±´ë“œë¦¬ì§€ ë§ˆì„¸ìš”.-->
 
 			<div class="collapse navbar-collapse" id="navbarColor03" style="height:100px">
 			   <div class="navbar-nav2">
 			   <ul class="navbar-nav mr-auto">
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/about">¼Ò°³</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/datamain">Áúº´DATA</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goods">³ó»ê¹°±¸¸Å</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/markets">³ó°¡º°±¸¸Å</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">·¹½ÃÇÇ</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">½Ä´ÜÃßÃµ</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">Á¤±â°áÁ¦</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/about">ì†Œê°œ</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/datamain">ì§ˆë³‘DATA</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goods">ë†ì‚°ë¬¼êµ¬ë§¤</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/markets">ë†ê°€ë³„êµ¬ë§¤</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">ë ˆì‹œí”¼</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">ì‹ë‹¨ì¶”ì²œ</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">ì •ê¸°ê²°ì œ</a></li>
 				</ul></div>
 			</div>
 		</nav>
 	</div>
 	<hr>
 	<br>
-	<!--main navbar ³¡-->
+	<!--main navbar ë-->
 	
 	<section>
-	<!-- ¿©±â¿¡ ¸¸µç ÄÁÅÙÃ÷¸¦ ³ÖÀ¸¸é µÉ °Í °°´Ù. -->
-	<!-- Main Controller ³»ºÎ¿¡ Á¸ÀçÇÏ´Â datamain ¸Þ¼­µå. -->
-	<!-- ±æ¾îÁø´Ù¸é ¸Þ¼­µå¸¦ ºÐÇÒÇØ°¡ »ç¿ëÇØµµ µÈ´Ù. -->
+	<!-- ì—¬ê¸°ì— ë§Œë“  ì»¨í…ì¸ ë¥¼ ë„£ìœ¼ë©´ ë  ê²ƒ ê°™ë‹¤. -->
+	<!-- Main Controller ë‚´ë¶€ì— ì¡´ìž¬í•˜ëŠ” datamain ë©”ì„œë“œ. -->
+	<!-- ê¸¸ì–´ì§„ë‹¤ë©´ ë©”ì„œë“œë¥¼ ë¶„í• í•´ê°€ ì‚¬ìš©í•´ë„ ëœë‹¤. -->
 	</section>
 	
 	<footer>
-		<h3>È¨ÆäÀÌÁö Á¤º¸(¹Ù´Ú ±Û)</h3>
+		<h3>í™ˆíŽ˜ì´ì§€ ì •ë³´(ë°”ë‹¥ ê¸€)</h3>
 	</footer>
-	<!--footer ³¡-->
+	<!--footer ë-->
 	
 </body>
 <script src="resources/_vendor/jquery/dist/jquery.min.js"></script>

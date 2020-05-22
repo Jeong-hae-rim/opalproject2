@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<!--20200519 ÈñÁ¤ Ä³·¯¼¿ cssÆÄÀÏ ½ÃÀÛ  -->
+<!--20200519 í¬ì • ìºëŸ¬ì…€ cssíŒŒì¼ ì‹œì‘  -->
 <link rel="stylesheet" href="resources/datafront/css/owl.carousel.css">
 <link rel="stylesheet"
 	href="resources/datafront/css/owl.theme.default.css">
-<!--20200519 ÈñÁ¤ Ä³·¯¼¿ cssÆÄÀÏ ³¡ -->
-<!-- 20200518 ÈñÁ¤ wordcloud Ãâ·Â ºÎºĞ css/jsÆÄÀÏ ½ÃÀÛ  -->
+<!--20200519 í¬ì • ìºëŸ¬ì…€ cssíŒŒì¼ ë -->
+<!-- 20200518 í¬ì • wordcloud ì¶œë ¥ ë¶€ë¶„ css/jsíŒŒì¼ ì‹œì‘  -->
 <script src="resources/opalcold_files/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="resources/opalcold_files/wordcloud2-0.0.1/wordcloud.css"
 	rel="stylesheet" />
@@ -17,9 +17,9 @@
 <script src="resources/opalcold_files/wordcloud2-0.0.1/hover.js"></script>
 <script
 	src="resources/opalcold_files/wordcloud2-binding-0.2.1/wordcloud2.js"></script>
-<!-- 20200518 ÈñÁ¤ wordcloud Ãâ·Â ºÎºĞ css/jsÆÄÀÏ  ³¡ -->
-<meta charset="EUC-KR">
-<title>Áúº´ data ÆäÀÌÁö</title>
+<!-- 20200518 í¬ì • wordcloud ì¶œë ¥ ë¶€ë¶„ css/jsíŒŒì¼  ë -->
+<meta>
+<title>ì§ˆë³‘ data í˜ì´ì§€</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -134,11 +134,11 @@ p {
 							<div class="collapse navbar-collapse" id="navbarColor03">
 								<ul class="navbar-nav mr-auto">
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="#">·Î±×ÀÎ</a></li>
+										style="font-size: 12px;" href="#">ë¡œê·¸ì¸</a></li>
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="#">È¸¿ø°¡ÀÔ</a></li>
+										style="font-size: 12px;" href="#">íšŒì›ê°€ì…</a></li>
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="#">°í°´¼¾ÅÍ</a></li>
+										style="font-size: 12px;" href="#">ê³ ê°ì„¼í„°</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -146,7 +146,7 @@ p {
 				</div>
 			</div>
 	</header>
-	<!--header ³¡-->
+	<!--header ë-->
 
 	<div class="bs-component2">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -155,7 +155,7 @@ p {
 				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<!--°Çµå¸®Áö ¸¶¼¼¿ä.-->
+			<!--ê±´ë“œë¦¬ì§€ ë§ˆì„¸ìš”.-->
 
 				<div id="datawrapper">
 			<div class="owl-carousel owl-theme">
@@ -192,7 +192,7 @@ p {
 					margin:10,
 					loop:true,
           nav:true,
-          navText:['ÀÌÀü','´ÙÀ½'],					
+          navText:['ì´ì „','ë‹¤ìŒ'],					
 					autoplay:true,
           autoplayTimeout:3000,
           autoplayHoverPause:true

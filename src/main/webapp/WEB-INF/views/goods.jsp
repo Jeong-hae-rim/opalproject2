@@ -1,12 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta>
-<title>³ó»ê¹° ÆÇ¸Å ÆäÀÌÁö</title>
+<title>ë†ì‚°ë¬¼ íŒë§¤ íŽ˜ì´ì§€</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet" href="resources/journal/bootstrap.css" media="screen">
@@ -40,11 +40,11 @@
 							<div class="collapse navbar-collapse" id="navbarColor03">
 								<ul class="navbar-nav mr-auto">
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="/opalproject/customLogin">·Î±×ÀÎ</a></li>
+										style="font-size: 12px;" href="/opalproject/customLogin">ë¡œê·¸ì¸</a></li>
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="/opalproject/entrance">È¸¿ø°¡ÀÔ</a></li>
+										style="font-size: 12px;" href="/opalproject/entrance">íšŒì›ê°€ìž…</a></li>
 									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="#">°í°´¼¾ÅÍ</a></li>
+										style="font-size: 12px;" href="#">ê³ ê°ì„¼í„°</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 	</header>
-	<!--header ³¡-->
+	<!--header ë-->
 
 	<div class="bs-component2">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -61,134 +61,134 @@
 				aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<!--°Çµå¸®Áö ¸¶¼¼¿ä.-->
+			<!--ê±´ë“œë¦¬ì§€ ë§ˆì„¸ìš”.-->
 
 			<div class="collapse navbar-collapse" id="navbarColor03" style="height:100px">
 			   <div class="navbar-nav2">
 			   <ul class="navbar-nav mr-auto">
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/about">¼Ò°³</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/datamain">Áúº´DATA</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goods">³ó»ê¹°±¸¸Å</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/markets">³ó°¡º°±¸¸Å</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">·¹½ÃÇÇ</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">½Ä´ÜÃßÃµ</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">Á¤±â°áÁ¦</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/about">ì†Œê°œ</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/datamain">ì§ˆë³‘DATA</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goods">ë†ì‚°ë¬¼êµ¬ë§¤</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/markets">ë†ê°€ë³„êµ¬ë§¤</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">ë ˆì‹œí”¼</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">ì‹ë‹¨ì¶”ì²œ</a></li>
+					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">ì •ê¸°ê²°ì œ</a></li>
 				</ul></div>
 			</div>
 		</nav>
 	</div>
 	<hr>
 	<br>
-	<!--main navbar ³¡-->
+	<!--main navbar ë-->
 	
 	<section>
-	<!-- ¿©±â¿¡ ¸¸µç ÄÁÅÙÃ÷¸¦ ³ÖÀ¸¸é µÉ °Í °°´Ù. -->
-	<!-- Main Controller ³»ºÎ¿¡ Á¸ÀçÇÏ´Â goods ¸Þ¼­µå. -->
+	<!-- ì—¬ê¸°ì— ë§Œë“  ì»¨í…ì¸ ë¥¼ ë„£ìœ¼ë©´ ë  ê²ƒ ê°™ë‹¤. -->
+	<!-- Main Controller ë‚´ë¶€ì— ì¡´ìž¬í•˜ëŠ” goods ë©”ì„œë“œ. -->
 	<!-- 20200513-->
 	
 	<main class="page-content">
   <div class="card">
     <div class="content">
-      <h2 class="title">°íÇ÷¾Ð, ¿µÁö¹ö¼¸</h2>
-      <p class="copy">ÀÌµ¿¿í ¸è»ìÀâ´Â ³óÀåÁÖ°¡ Á÷Á¢ Å°¿î Ä£È¯°æ</p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¿µ±â³× ¿µ±â¹ö¼¸ º¸·¯°¡±â</button>
+      <h2 class="title">ê³ í˜ˆì••, ì˜ì§€ë²„ì„¯</h2>
+      <p class="copy">ì´ë™ìš± ë©±ì‚´ìž¡ëŠ” ë†ìž¥ì£¼ê°€ ì§ì ‘ í‚¤ìš´ ì¹œí™˜ê²½</p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì˜ê¸°ë„¤ ì˜ê¸°ë²„ì„¯ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
   <div class="card">
     <div class="content">
-      <h2 class="title">´ç´¢, ¿©ÁÖ</h2>
-      <p class="copy"> ºñÅ¸¹Î Ã¤¼Ò,Ãµ¿¬ ÀÎ½¶¸°  </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¼¼¹Ì³× ¿©ÁÖ¾Æ¿ï·¿ º¸·¯°¡±â</button>
+      <h2 class="title">ë‹¹ë‡¨, ì—¬ì£¼</h2>
+      <p class="copy"> ë¹„íƒ€ë¯¼ ì±„ì†Œ,ì²œì—° ì¸ìŠë¦°  </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì„¸ë¯¸ë„¤ ì—¬ì£¼ì•„ìš¸ë › ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
   <div class="card">
     <div class="content">
-      <h2 class="title">´ç´¢, µÅÁö°¨ÀÚÁø¾×</h2>
-      <p class="copy">ÀÚ¿¬¿¡¼­ ¾òÀº Ãµ¿¬ ÀÎ½¶¸°</p>
-      <button class="btn" onclick="location.href='/opalproject/details';">Áö¿øÀÌ³× µÅÁö°¨ÀÚ º¸·¯°¡±â</button>
+      <h2 class="title">ë‹¹ë‡¨, ë¼ì§€ê°ìžì§„ì•¡</h2>
+      <p class="copy">ìžì—°ì—ì„œ ì–»ì€ ì²œì—° ì¸ìŠë¦°</p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì§€ì›ì´ë„¤ ë¼ì§€ê°ìž ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
   <div class="card">
     <div class="content">
-      <h2 class="title">À§ÀåÁúÈ¯, ºñÆ®</h2>
-      <p class="copy"> Ç÷°ü¹Ì³²ÀÌ µÇ´Â Çö¸íÇÑ ¹æ¹ý </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">µ¿±Ô³× ºñÆ®ÁÖ¼¼¿ä º¸·¯°¡±â</button>
+      <h2 class="title">ìœ„ìž¥ì§ˆí™˜, ë¹„íŠ¸</h2>
+      <p class="copy"> í˜ˆê´€ë¯¸ë‚¨ì´ ë˜ëŠ” í˜„ëª…í•œ ë°©ë²• </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ë™ê·œë„¤ ë¹„íŠ¸ì£¼ì„¸ìš” ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
    <div class="card">
     <div class="content">
-      <h2 class="title">ÃéÀå¿°, È¿¼Ò</h2>
-      <p class="copy"> °¡Á· °Ç°­À» Ã¥ÀÓÁö´Â </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">ÁöÇý³× È¿¼Ò¿ø º¸·¯°¡±â</button>
+      <h2 class="title">ì·Œìž¥ì—¼, íš¨ì†Œ</h2>
+      <p class="copy"> ê°€ì¡± ê±´ê°•ì„ ì±…ìž„ì§€ëŠ” </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì§€í˜œë„¤ íš¨ì†Œì› ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
     <div class="card">
     <div class="content">
-      <h2 class="title">´ç´¢, »õ½Ïº¸¸® </h2>
-      <p class="copy"> Ãµ¿¬ ÇØµ¶ ½Ä¹° </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¼ºÁøÀÌ³× º¸¸®ÁöÇý º¸·¯°¡±â</button>
+      <h2 class="title">ë‹¹ë‡¨, ìƒˆì‹¹ë³´ë¦¬ </h2>
+      <p class="copy"> ì²œì—° í•´ë… ì‹ë¬¼ </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì„±ì§„ì´ë„¤ ë³´ë¦¬ì§€í˜œ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div> 
   
      <div class="card">
     <div class="content">
-      <h2 class="title">°íÇ÷¾Ð, ¾çÆÄÁó</h2>
-      <p class="copy"> ²®Áú¼Ó ¿µ¾ç±îÁö ÅëÂ°·Î ´ã¾Æ³½ À¯±â³ó ¾çÆÄÁó </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¼º¿¬ÀÌ³× ¾çÆÄ³² º¸·¯°¡±â</button>
+      <h2 class="title">ê³ í˜ˆì••, ì–‘íŒŒì¦™</h2>
+      <p class="copy"> ê»ì§ˆì† ì˜ì–‘ê¹Œì§€ í†µì§¸ë¡œ ë‹´ì•„ë‚¸ ìœ ê¸°ë† ì–‘íŒŒì¦™ </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì„±ì—°ì´ë„¤ ì–‘íŒŒë‚¨ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
   
   <div class="card">
     <div class="content">
-      <h2 class="title">±â°üÁö, »ý°­</h2>
-      <p class="copy"> ¸ñÀÌ ¾Ë½ÎÇÒ ¶© </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¼öÀÌ³× »ý°­ º¸·¯°¡±â</button>
+      <h2 class="title">ê¸°ê´€ì§€, ìƒê°•</h2>
+      <p class="copy"> ëª©ì´ ì•Œì‹¸í•  ë• </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ìˆ˜ì´ë„¤ ìƒê°• ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div> 
   
   <div class="card">
     <div class="content">
-      <h2 class="title">Ä¡ÁÖÁúÈ¯, ³ìÂ÷</h2>
-      <p class="copy"> ³ìÂ÷¾ÆÀÌ½ºÅ©¸² ÇìÀÌ·¯µµ ÀÚ´Ù°¡ ÀÏ¾î³ª´Â </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">±Ô¿µÀÌ³× ³ìÂ÷ º¸·¯°¡±â</button>
+      <h2 class="title">ì¹˜ì£¼ì§ˆí™˜, ë…¹ì°¨</h2>
+      <p class="copy"> ë…¹ì°¨ì•„ì´ìŠ¤í¬ë¦¼ í—¤ì´ëŸ¬ë„ ìžë‹¤ê°€ ì¼ì–´ë‚˜ëŠ” </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ê·œì˜ì´ë„¤ ë…¹ì°¨ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div> 
   
   <div class="card">
     <div class="content">
-      <h2 class="title">°¨±â, µµ¶óÁö</h2>
-      <p class="copy"> ±ÍÂúÀº µµ¶óÁö ¼ÕÁúÀº ÀÌÁ¦ ±×¸¸ </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">ÈñÁ¤ÀÌ³× µµ¶óÁã º¸·¯°¡±â</button>
+      <h2 class="title">ê°ê¸°, ë„ë¼ì§€</h2>
+      <p class="copy"> ê·€ì°®ì€ ë„ë¼ì§€ ì†ì§ˆì€ ì´ì œ ê·¸ë§Œ </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">í¬ì •ì´ë„¤ ë„ë¼ì¥ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div> 
   
    <div class="card">
     <div class="content">
-      <h2 class="title">À§Àå¿°, ¾ç¹èÃßºê·ÎÄÝ¸®Áó</h2>
-      <p class="copy"> Á¶¼¼È£ ¾ç¹èÃß ¾Æ´Ô </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¼¼È£³× ¾ç¹èÃßÁó º¸·¯°¡±â</button>
+      <h2 class="title">ìœ„ìž¥ì—¼, ì–‘ë°°ì¶”ë¸Œë¡œì½œë¦¬ì¦™</h2>
+      <p class="copy"> ì¡°ì„¸í˜¸ ì–‘ë°°ì¶” ì•„ë‹˜ </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì„¸í˜¸ë„¤ ì–‘ë°°ì¶”ì¦™ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div>
   
   <div class="card">
     <div class="content">
-      <h2 class="title">´ëÀå¾Ï, À¯±â³ó ¸¶´ÃÀå¾ÆÂî</h2>
-      <p class="copy"> µ·°¡¾² ³Ê¸¶´Ã </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">Âù¿ì³× ¸¶´ÃÀå¾ÆÂî º¸·¯°¡±â</button>
+      <h2 class="title">ëŒ€ìž¥ì•”, ìœ ê¸°ë† ë§ˆëŠ˜ìž¥ì•„ì°Œ</h2>
+      <p class="copy"> ëˆê°€ì“° ë„ˆë§ˆëŠ˜ </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì°¬ìš°ë„¤ ë§ˆëŠ˜ìž¥ì•„ì°Œ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div> 
   
     <div class="card">
     <div class="content">
-      <h2 class="title">È£Èí±âÁúÈ¯, Áö¸®»ê ¹ú²Ü</h2>
-      <p class="copy"> ±íÀº ¸À°ú ÇâÀÌ ³²´Ù¸¥ ÇÁ¸®¹Ì¾ö ²Ü </p>
-      <button class="btn" onclick="location.href='/opalproject/details';">¼Ò¿¬ÀÌ³× ²Ü³óÀå º¸·¯°¡±â</button>
+      <h2 class="title">í˜¸í¡ê¸°ì§ˆí™˜, ì§€ë¦¬ì‚° ë²Œê¿€</h2>
+      <p class="copy"> ê¹Šì€ ë§›ê³¼ í–¥ì´ ë‚¨ë‹¤ë¥¸ í”„ë¦¬ë¯¸ì—„ ê¿€ </p>
+      <button class="btn" onclick="location.href='/opalproject/details';">ì†Œì—°ì´ë„¤ ê¿€ë†ìž¥ ë³´ëŸ¬ê°€ê¸°</button>
     </div>
   </div> 
   
@@ -200,15 +200,15 @@
 </main>	
 <div class="insert_button">
 <div class="insert_button2">
-<button class="insert_button3" onclick="location.href='goodsInsert'">»óÇ° µî·ÏÇÏ±â</button>
+<button class="insert_button3" onclick="location.href='goodsInsert'">ìƒí’ˆ ë“±ë¡í•˜ê¸°</button>
 </div>
 </div>
 	</section>
 	
 	<footer>
-		<h3>È¨ÆäÀÌÁö Á¤º¸(¹Ù´Ú ±Û)</h3>
+		<h3>í™ˆíŽ˜ì´ì§€ ì •ë³´(ë°”ë‹¥ ê¸€)</h3>
 	</footer>
-	<!--footer ³¡-->
+	<!--footer ë-->
 	
 </body>
 <script src="resources/_vendor/jquery/dist/jquery.min.js"></script>

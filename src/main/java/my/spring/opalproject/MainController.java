@@ -41,18 +41,8 @@ public class MainController {
 	}
 	//농가별구매 컨트롤러 -- 클래스 분할해서 사용해도 됨
 	
-	@RequestMapping(value="/entrance")
-	public String entrance() {
-		
-		return  "entrance";
-	}
-	//회원가입 컨트롤러 -- 클래스 분할해서 사용해도 됨
+
 	
-	@RequestMapping(value="/entranceForm")
-	public String entranceForm() {
-		
-		return  "entranceForm";
-	}
-	//회원가입 컨트롤러 -- 클래스 분할해서 사용해도 됨
+	
 
 }
