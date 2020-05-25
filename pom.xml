@@ -2,15 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>my.spring</groupId>
-	<artifactId>opalproject</artifactId>
-	<name>opalproject</name>
+	<groupId>com.my</groupId>
+	<artifactId>testproject</artifactId>
+	<name>testproject</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
-  
-		<java-version>1.8</java-version>
-		<org.springframework-version>5.2.6.RELEASE</org.springframework-version>
+		<java-version>1.6</java-version>
+		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
@@ -84,7 +83,6 @@
 			<scope>runtime</scope>
 		</dependency>
 
-
 		<!-- @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
@@ -117,85 +115,7 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>
-		
-<!-- 2020/5/9 김동규 MyBatis 관련 라이브러리 추가  -->
-<!-- spring-jdbc/spring-tx : 스프링에서 데이터베이스 처리와 트랜잭션 처리(이 라이브러리들은 MyBatis와 무관하게 보이지만 추가하지 않은 경우에 에러가 발생하므로 주의해야 함.) -->
-<!-- mybatis/mybatis-spring : MyBatis와 스프링 연동용 라이브러리 -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.4.1</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
-			<version>1.3.2</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${org.springframework-version}</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>5.0.2.RELEASE</version>
-		</dependency>
-<!-- 2020/5/9 김동규  MyBatis 관련 라이브러리 추가 끝.-->
-
-<!-- 2020/5/9 김동규 spring-security 관련 라이브러리 추가. -->
-<!-- 스프링 공식 문서에는 spring-security-web만이 존재하지만, 다양한 처리를 위해서는 아래와 같이 3개의 파일을 받도록 함. -->
-	<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-web</artifactId>
-		<version>5.0.6.RELEASE</version>
-	</dependency>
-	
-		<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-config</artifactId>
-		<version>5.0.6.RELEASE</version>
-	</dependency>
-	
-		<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-core</artifactId>
-		<version>5.0.13.RELEASE</version>
-	</dependency>
-<!-- JSP에 스프링 시큐리티 관련된 태그 라이브러리를 활용할 수 있도록 spring-security-taglib 추가. -->
-		<dependency>
-		<groupId>org.springframework.security</groupId>
-		<artifactId>spring-security-taglibs</artifactId>
-		<version>5.0.6.RELEASE</version>
-	</dependency>
-<!-- JSP에 스프링 시큐리티 관련된 태그 라이브러리를 활용할 수 있도록 spring-security-taglib 추가 끝. -->
-<!-- 2020/5/9 김동규 spring-security 관련 라이브러리 추가 끝. -->
-
-<!-- 2020/5/16 김동규 BcryptPasswordEncoder를 이용한 암호화를 사용하기 위해 테스트 코드 작성. 테스트 코드 실행 위해  spring-test가 추가되어야 함. -->
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-test</artifactId>
-		<version>${org.springframework-version}</version>
-	</dependency>
-<!-- 2020/5/16 김동규 BcryptPasswordEncoder를 이용한 암호화를 사용하기 위해 테스트 코드 작성. 테스트 코드 실행 위해  spring-test가 추가되어야 함. 끝.-->
-<!-- 2020/5/18 김동규 HikariCP라이브러리 추가.-->
-	<dependency>
-		<groupId>com.zaxxer</groupId>
-		<artifactId>HikariCP</artifactId>
-		<version>2.7.4</version>
-	</dependency>
-<!-- 2020/5/18 김동규 HikariCP 추가 끝.-->
-<!-- 2020/5/18 김동규 ojdbc라이브러리 추가.-->
-	<dependency>
-			<groupId>com.jslsolucoes</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.1.0</version>
-		</dependency>
-<!-- 2020/5/18 김동규 ojdbc라이브러리 추가끝.-->
+		</dependency>        
 	</dependencies>
     <build>
         <plugins>
@@ -218,8 +138,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
