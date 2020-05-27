@@ -18,20 +18,21 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler{
 	public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication auth) throws IOException, ServletException{
 		List<String> roleNames = new ArrayList<>();
 		auth.getAuthorities().forEach(authority -> {roleNames.add(authority.getAuthority());});
-		
+		System.out.println("로그인 성공 핸들러 들어옴");
+		System.out.println(roleNames.contains("ROLE_PARTNER"));
 		// 200514 김동규 admin 권한이 있는 유저가 로그인 시 admin 페이지로 이동.
-		if(roleNames.contains("ROLE_ADMIN")) {
-			response.sendRedirect("/opalproject/admin");
+		if(roleNames.contains("RPARTNER")) {
+			response.sendRedirect("/opalproject/main");
 			return;
 		}
 		
 		// 200514 김동규 member 권한이 있는 유저가 로그인 시 generalUser 페이지로 이동. 매핑명 주의.
-		if(roleNames.contains("ROLE_MEMBER")) {
-			response.sendRedirect("/opalproject/generaluser");
+		if(roleNames.contains("CUSTOMER")) {
+			response.sendRedirect("/opalproject/main");
 			return;
 		}
 		
-		response.sendRedirect("/");
+		response.sendRedirect("/opalproject/main");
 	}
 }
 /*

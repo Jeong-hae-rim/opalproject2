@@ -4,7 +4,7 @@ public class FarmVO {
 	/*
 	 * 2020.05.20 김동규 농장 VO 추가
 	 * 농가 이름, 농가 아이디, 농가 비밀번호, 농가 이메일, 농가 주소, 농가 상세설명, 친환경 코드
-	 * 농가 핸드폰 번호
+	 * 농가 핸드폰 번
 	 */
 	private String farm_name;
 	private String farm_id;
@@ -14,7 +14,7 @@ public class FarmVO {
 	private String farm_content;
 	private String eco_cd;
 	private String farm_pnum;
-	private String farm_auth; //페이징할 때 자동으로 들어가는 것
+	private String farm_auth;
 	
 	public String getFarm_name() {
 		return farm_name;

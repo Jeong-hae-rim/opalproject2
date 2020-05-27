@@ -1,178 +1,166 @@
 package model.vo;
 
 public class MainVO {
-   // 20200513 jung OpalVO  깮 꽦
+   // 20200513 jung OpalVO 생성
 
    // 20200513 jung Customer table
-   // 怨좉컼 肄붾뱶
+   // 고객 코드
    private String custCd;
-   // 怨좉컼  씠由 
+   // 고객 이름
    private String custName;
-   // 怨좉컼  븘 씠 뵒
+   // 고객 아이디
    private String custId;
-   // 怨좉컼 鍮꾨 踰덊샇
+   // 고객 비밀번호
    private String custPw;
-   // 怨좉컼  꽦蹂 
+   // 고객 성별
    private String custGender;
-   // 怨좉컼  씠硫붿씪
+   // 고객 이메일
    private String custEmail;
-   // 怨좉컼  쟾 솕踰덊샇
+   // 고객 전화번호
    private String custPnum;
-   // 怨좉컼 二쇱냼
+   // 고객 주소
    private String custAddress;
-   // 異붿쿇 씤 怨좉컼  븘 씠 뵒
+   // 추천인 고객 아이디
    private String recoCustId;
 
    // 20200513 jung Eco table
-   // 移쒗솚寃 
-   // 移쒗솚寃  肄붾뱶
+   // 친환경
+   // 친환경 코드
    private String ecoCd;
-   // 移쒗솚寃   씠由 
+   // 친환경 이름
    private String ecoName;
 
    // 20200513 jung Farm table
-   //  냽媛  肄붾뱶
+   // 농가 코드
    private String farmCd;
-   //  냽媛   씠由 
+   // 농가 이름
    private String farmName;
-   //  냽媛  二쇱냼
+   // 농가 주소
    private String farmAddress;
-   //  냽媛   냼媛 
+   // 농가 소개
    private String farmContent;
-   //  뙆 듃 꼫 肄붾뱶
+   // 파트너 코드
    private String partCd;
-   // 移쒗솚寃  肄붾뱶
+   // 친환경 코드
    // private String ecoCd;
-   // Eco table 蹂  닔   寃뱀튂誘 濡  1媛쒕쭔  깮 꽦
-   //  냽媛   쟾 솕踰덊샇
+   // Eco table 변수와 겹치므로 1개만 생성
+   // 농가 전화번호
    private String farmPnum;
 
    // 20200513 jung Menu table
-   //  떇 떒 肄붾뱶
+   // 식단 코드
    private String menuCd;
-   //  떇 떒  씠由 
+   // 식단 이름
    private String menuName;
-   //  떇 떒  냼媛 
+   // 식단 소개
    private String menuContent;
 
    // 20200513 jung Order table
-   // 怨좉컼 肄붾뱶
+   // 고객 코드
    // private String custCd;
-   //  쐞  뀒 씠釉붿쓽 蹂  닔   寃뱀튂誘 濡  1媛쒕쭔  깮 꽦
-   // 二쇰Ц 肄붾뱶
+   // 위 테이블의 변수와 겹치므로 1개만 생성
+   // 주문 코드
    private String orderCd;
-   // 二쇰Ц  궇吏 
+   // 주문 날짜
    private String orderDate;
-   //  긽 뭹 肄붾뱶
+   // 상품 코드
    private String productCd;
 
    // 20200513 jung Package table
-   //  뙣 궎吏  肄붾뱶
+   // 패키지 코드
    private String packCd;
-   //  뙣 궎吏   씠由 
+   // 패키지 이름
    private String packName;
-   //  뙣 궎吏   냼媛 
+   // 패키지 소개
    private String packContent;
-   //  뙣 궎吏  媛 寃 
+   // 패키지 가격
    private Integer packPrice;
 
    // 20200513 jung Partner table
-   //  뙆 듃 꼫 肄붾뱶
+   // 파트너 코드
    // private String partCd;
-   //  쐞 쓽  뀒 씠釉붽낵 寃뱀퀜 꽌 1媛쒕쭔  깮 꽦
-   //  뙆 듃 꼫  씠由 
+   // 위의 테이블과 겹쳐서 1개만 생성
+   // 파트너 이름
    private String partName;
-   //  뙆 듃 꼫  븘 씠 뵒
+   // 파트너 아이디
    private String partId;
-   public String getPartName() {
-      return partName;
-   }
-   public void setPartName(String partName) {
-      this.partName = partName;
-   }
-   public String getPartId() {
-      return partId;
-   }
-   public void setPartId(String partId) {
-      this.partId = partId;
-   }
-   //  뙆 듃 꼫 鍮꾨 踰덊샇
+   // 파트너 비밀번호
    private String partPw;
-   //  뙆 듃 꼫  꽦蹂 
+   // 파트너 성별
    private String partGender;
-   //  뙆 듃 꼫  씠硫붿씪
+   // 파트너 이메일
    private String partEmail;
-   //  뙆 듃 꼫  쟾 솕踰덊샇
+   // 파트너 전화번호
    private String partPnum;
-   //  뙆 듃 꼫 二쇱냼
+   // 파트너 주소
    private String partAddress;
-   // 異붿쿇 씤  뙆 듃 꼫  븘 씠 뵒
+   // 추천인 파트너 아이디
    private String recoPartId;
 
    // 20200513 jung PMenu table
-   // FK濡쒕쭔 援ъ꽦 맂  뀒 씠釉붾줈 寃뱀퀜 꽌  깮 꽦  븞 븿
+   // FK로만 구성된 테이블로 겹쳐서 생성 안함
 
    // 20200513 jung PRecipe table
-   //  긽 뭹 肄붾뱶
+   // 상품 코드
    // private String productCd;
-   //  젅 떆 뵾 肄붾뱶
+   // 레시피 코드
    private String recipeCd;
-   //  젅 떆 뵾  뾽 뜲 씠 듃 씪
+   // 레시피 업데이트일
    private String recipeUpdate;
 
    // 20200513 jung Product table
-   //  긽 뭹 肄붾뱶
+   // 상품 코드
    // private String productCd;
-   //  쐞 쓽  뀒 씠釉붽낵 寃뱀퀜 꽌 1媛쒕쭔  깮 꽦
-   //  긽 뭹  씠由 
+   // 위의 테이블과 겹쳐서 1개만 생성
+   // 상품 이름
    private String productName;
-   //  긽 뭹  냼媛 
+   // 상품 소개
    private String productContent;
-   //  긽 뭹 媛 寃 
+   // 상품 가격
    private Integer productPrice;
-   //  냽媛  肄붾뱶
+   // 농가 코드
    // private String farmCd;
-   //  쐞 쓽  뀒 씠釉붽낵 寃뱀퀜 꽌 1媛쒕쭔  깮 꽦
-   //  긽 뭹  닔
+   // 위의 테이블과 겹쳐서 1개만 생성
+   // 상품 수
    private Integer productSu;
 
    // 20200513 jung Recipe table
-   //  젅 떆 뵾 肄붾뱶
+   // 레시피 코드
    // private String recipeCd;
-   //  쐞 쓽  뀒 씠釉붽낵 寃뱀퀜 꽌 1媛쒕쭔  깮 꽦
-   //  젅 떆 뵾  씠由 
+   // 위의 테이블과 겹쳐서 1개만 생성
+   // 레시피 이름
    private String recipeName;
-   //  젅 떆 뵾  냼媛 
+   // 레시피 소개
    private String recipeContent;
 
    // 20200513 jung Regular table
-   //  긽 뭹 肄붾뱶
+   // 상품 코드
    // private String productCd;
-   //  뙣 궎吏  肄붾뱶
+   // 패키지 코드
    // private String packCd;
-   // 援щ룆  궇吏 
+   // 구독 날짜
    private String regularDate;
-   // 援щ룆 肄붾뱶
+   // 구독 코드
    private String regularCd;
 
    // 20200513 jung sickfood table
-   //  쓬 떇 肄붾뱶
+   // 음식 코드
    private String foodCd;
-   // 吏덈퀝 肄붾뱶
+   // 질병 코드
    private String sickCd;
-   //  쓬 떇  씠由 
+   // 음식 이름
    private String foodName;
 
    // 20200513 jung sick table
-   // 吏덈퀝 肄붾뱶
+   // 질병 코드
    // private String sickCd;
-   //  쐞 쓽  뀒 씠釉붽낵 寃뱀퀜 꽌 1媛쒕쭔  깮 꽦
-   // 吏덈퀝  씠由 
+   // 위의 테이블과 겹쳐서 1개만 생성
+   // 질병 이름
    private String sickName;
-   // 愿 由ъ옄 肄붾뱶
+   // 관리자 코드
    private String superCd;
 
    // 20200513 jung super table
-   // FK濡쒕쭔 援ъ꽦 맂  뀒 씠釉붾줈 寃뱀퀜 꽌  깮 꽦  븞 븿
+   // FK로만 구성된 테이블로 겹쳐서 생성 안함
 
 }

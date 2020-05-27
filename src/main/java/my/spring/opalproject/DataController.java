@@ -57,18 +57,4 @@ public class DataController {
 
 	}
 	
-	@RequestMapping(value = "/datatest")
-	public String datatest() {
-		return "datatest";
-
-	}
-	
-	@RequestMapping(value = "/infotest")
-	public String infotest() {
-		return "infotest";
-
-	}
-	
-
-	
 }

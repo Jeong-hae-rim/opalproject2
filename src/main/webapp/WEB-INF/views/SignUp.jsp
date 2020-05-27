@@ -1,103 +1,99 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-<!DOCTYPE html>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<html class="no-js" lang="">
 <head>
-<meta>
-<title>회원가입 :: 선택</title>
-</head>
+<meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="stylesheet" href="resources/journal/bootstrap.css"
-	media="screen">
-<link rel="stylesheet" href="resources/_assets/css/custom.min.css">
-<link rel="stylesheet" href="resources/ourcss/main.css">
-<link rel="stylesheet" href="resources/ourcss/signUp.css">
+<title>OPAL :: SIGN UP</title>
+<link rel="icon" type="image/png" sizes="32x32"
+	href="resources/images/Opal.png">
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="resources/css/flexslider.css">
+<link rel="stylesheet" href="resources/css/jquery.fancybox.css">
+<link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/responsive.css">
+<link rel="stylesheet" href="resources/css/animate.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+	rel="stylesheet">
+<link href="resources/ourcss/signUp.css" rel="stylesheet"
+	type="text/css" />
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+</head>
 <body>
 	<header>
-		<div class="header_wrap">
-			<div class="logo">
-				<a href="/opalproject/main">
-					<h1>
-						<img src="resources/images/Opal.png" width=150 alt
-							class="default_logo">
-					</h1>
-				</a>
-			</div>
+		<section class="banner" role="banner">
+			<header id="header">
+				<div class="header-content clearfix">
+					<a class="logo" href="/opalproject/index"><img
+						src="resources/images/Opal.png" width="100" alt=""></a>
+					<nav class="navigation" role="navigation">
+						<ul class="primary-nav">
+							<li><a href="/opalproject/about">OPAL이란</a></li>
+							<li><a href="/opalproject/team">팀 소개</a></li>
+							<li><a href="/opalproject/customLogin">로그인</a></li>
+							<li><a href="/opalproject/signup">회원가입</a></li>
+						</ul>
+					</nav>
+					<a href="#" class="nav-toggle">Menu<span></span></a>
+				</div>
+				<!-- header content -->
+			</header>
+			<!-- header -->
+		</section>
+		<!-- banner -->
 
-			<div class="top_nav">
-				<div class="top_ul">
-					<div class="bs-component1">
-						<nav class="navbar navbar-expand-lg navbar-light bg-light">
-							<button class="navbar-toggler" type="button"
-								data-toggle="collapse" data-target="#navbarColor03"
-								aria-controls="navbarColor03" aria-expanded="false"
-								aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
 
-							<div class="collapse navbar-collapse" id="navbarColor03">
-								<ul class="navbar-nav mr-auto">
-									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="/opalproject/customLogin">로그인</a></li>
-									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="/opalproject/entrance">회원가입</a></li>
-									<li class="nav-item"><a class="nav-link"
-										style="font-size: 12px;" href="#">고객센터</a></li>
-								</ul>
+		<section id="entrance">
+
+			<section id="entrance">
+
+				<h2>가입할 유형을 선택해주세요.</h2>
+
+				<div class=button>
+					<button class="customer"
+						onclick="location.href='/opalproject/signupform?member=customer'">고객</button>
+					<button class="farmer"
+						onclick="location.href='/opalproject/signupform?member=partner'">파트너</button>
+				</div>
+
+			</section>
+			<footer class="footer">
+				<div class="footer-top">
+					<div class="container">
+						<div class="row">
+							<div class="footer-col col-md-4"></div>
+							<div class="footer-col col-md-4">
+								<img src="resources/images/Opal.png" width="150" alt="">
+								<h5>with Health</h5>
 							</div>
-						</nav>
+							<div class="footer-col col-md-4"></div>
+						</div>
 					</div>
 				</div>
-			</div>
-	</header>
-	<!--header 끝-->
-
-	<div class="bs-component2">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarColor03" aria-controls="navbarColor03"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!--건드리지 마세요.-->
-
-			<div class="collapse navbar-collapse" id="navbarColor03"
-				style="height: 100px">
-				<div class="navbar-nav2">
-					<ul class="navbar-nav mr-auto">
-							<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/about">소개</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/datamain">질병DATA</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goods">농산물구매</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/markets">농가별구매</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">레시피</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">식단추천</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">정기결제</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-	<hr>
-	<br>
-	<!--main navbar 끝-->
-	
-	<section id="entrance">
-	
-	<h2>가입할 유형을 선택해주세요.</h2>
-	
-	<div class=button>
-	<button class="customer" onclick="location.href='signUp?member=customer'">고객</button>
-	<button class="farmer" onclick="location.href='signUp?member=partner'">파트너</button>
-	</div>
-	
-	</section>
-	
-	<footer>
-		<h3>홈페이지 정보(바닥 글)</h3>
-	</footer>
-	<!--footer 끝-->
+			</footer>
+			<!-- footer -->
 </body>
+<script>
+	System.out.println("addrDetail");
+	System.out.println("roadAddrPart1");
+</script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="resources/js/jquery.min.js"><\/script>')
+</script>
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/jquery.flexslider-min.js"></script>
+<script src="resources/js/jquery.fancybox.pack.js"></script>
+<script src="resources/js/jquery.waypoints.min.js"></script>
+<script src="resources/js/retina.min.js"></script>
+<script src="resources/js/modernizr.js"></script>
+<script src="resources/js/main.js"></script>
 </html>

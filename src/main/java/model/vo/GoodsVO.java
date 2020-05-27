@@ -3,88 +3,113 @@ package model.vo;
 public class GoodsVO {
 	//20200513 Eunha GoodsVO
 	
-	private int post_id;
-	//ì‹œí€€ìŠ¤ë¡œ ì¶”ê°€ë˜ê²Œ í•˜ë ¤ê³  í•´ë‘ 
-	private String partName;
-	//ì‹œí€€ìŠ¤ ì´í•˜ë™ë¬¸
-	private String partId;
-	//ì´í•˜ ë™ë¬¸
+	private int product_cd; //½ÃÄö½º·Î »ı¼º
+	private String part_name; //³ó°¡ ÀÌ¸§
+	private String part_id; // ³óºÎ ¾ÆÀÌµğ
+	private String product_name; //»óÇ° ÀÌ¸§
+	private String product_content; //»óÇ° ¼³¸í
+	private int product_price; // »óÇ° °¡°İ
+	private int product_su; // »óÇ° ¼ö·®
+	/*
+	 * private int farm_cd; //³ó°¡ ÄÚµå , ³ó°¡ Å×ÀÌºí¿¡¼­ Ã£Á¶ÇÒ °ÅÀÓ ,½ÃÄö½º·Î »ı¼ºµÇ´Â ºÎºĞ
+	 */
 	
-	public String getPartName() {
-		return partName;
-	}
-	public void setPartName(String partName) {
-		this.partName = partName;
-	}
-	public String getPartId() {
-		return partId;
-	}
-	public void setPartId(String partId) {
-		this.partId = partId;
+	
+	public int getProduct_cd() {
+		return product_cd;
 	}
 
 
-	private String productName;
-	//ìƒí’ˆ ì´ë¦„
-	private String productContent;
-	//ìƒí’ˆ ì„¤ëª…
-	private Integer productPrice;
-	//ìƒí’ˆ ê°€ê²©
-	private Integer productSu;
-	//ìƒí’ˆ ìˆ˜ëŸ‰
-	private int productCd;
-	//ìƒí’ˆ ì½”ë“œ
-	private int farmCd;
-	//ë†ë¶€ ì½”ë“œ
 
-	
-	public int getPost_id() {
-		return post_id;
+	public void setProduct_cd(int product_cd) {
+		this.product_cd = product_cd;
 	}
-	public void setPost_id(int post_id) {
-		this.post_id = post_id;
+
+
+
+	public String getPart_name() {
+		return part_name;
 	}
-	public String getProductName() {
-		return productName;
+
+
+
+	public void setPart_name(String part_name) {
+		this.part_name = part_name;
 	}
-	public void setProductName(String productName) {
-		this.productName = productName;
+
+
+
+	public String getPart_id() {
+		return part_id;
 	}
-	public String getProductContent() {
-		return productContent;
+
+
+
+	public void setPart_id(String part_id) {
+		this.part_id = part_id;
 	}
-	public void setProductContent(String productContent) {
-		this.productContent = productContent;
+
+
+
+	public String getProduct_name() {
+		return product_name;
 	}
-	public Integer getProductPrice() {
-		return productPrice;
+
+
+
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
 	}
-	public void setProductPrice(Integer productPrice) {
-		this.productPrice = productPrice;
+
+
+
+	public String getProduct_content() {
+		return product_content;
 	}
-	public Integer getProductSu() {
-		return productSu;
+
+
+
+	public void setProduct_content(String product_content) {
+		this.product_content = product_content;
 	}
-	public void setProductSu(Integer productSu) {
-		this.productSu = productSu;
+
+
+
+	public int getProduct_price() {
+		return product_price;
 	}
-	public int getProductCd() {
-		return productCd;
+
+
+
+	public void setProduct_price(int product_price) {
+		this.product_price = product_price;
 	}
-	public void setProductCd(int productCd) {
-		this.productCd = productCd;
+
+
+
+	public int getProduct_su() {
+		return product_su;
 	}
-	public int getFarmCd() {
-		return farmCd;
+
+
+
+	public void setProduct_su(int product_su) {
+		this.product_su = product_su;
 	}
-	public void setFarmCd(int farmCd) {
-		this.farmCd = farmCd;
-	}
-	
-	
+
+
+	/*
+	 * public int getFarm_cd() { return farm_cd; }
+	 * 
+	 * 
+	 * 
+	 * public void setFarm_cd(int farm_cd) { this.farm_cd = farm_cd; }
+	 */
+
+
 	@Override
 	public String toString() {
-		return "GoodsVO [post_id=" + post_id + ", partName=" + partName + ", partId=" + partId + ",productName=" + productName + ", productContent=" + productContent + ", productPrice=" + productPrice + ", productSu=" + productSu + ", productCd=" +  productCd + ", farmCd=" + farmCd + "]";
+		return "GoodsVO [product_cd=" + product_cd + ", part_name=" + part_name + ", part_id=" + part_id + ",product_name=" + product_name + ", product_content=" + product_content + ", productPrice=" + product_price + ", productSu=" + product_su + ", productCd=" +  product_cd + "]";
 	}
 	
 }

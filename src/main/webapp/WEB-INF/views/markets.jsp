@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta>
+<meta charset="EUC-KR">
 <title>소개</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,8 +40,10 @@
 
 							<div class="collapse navbar-collapse" id="navbarColor03">
 								<ul class="navbar-nav mr-auto">
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="/opalproject/customLogin">로그인</a></li>
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="/opalproject/entrance">회원가입</a></li>
+					<li class="nav-item"><a class="nav-link"
+										style="font-size: 12px;" href="/opalproject/signin">로그인</a></li>
+									<li class="nav-item"><a class="nav-link"
+										style="font-size: 12px;" href="/opalproject/signup">회원가입</a></li>
 									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">고객센터</a></li>
 								</ul>
 							</div>
@@ -71,6 +73,7 @@
 					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">레시피</a></li>
 					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">식단추천</a></li>
 					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">정기결제</a></li>
+					    <li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goodsInsertForm">상품등록</a></li>
 				</ul></div>
 			</div>
 		</nav>
