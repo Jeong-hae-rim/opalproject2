@@ -23,7 +23,7 @@ public class UserController {
 	
 	@RequestMapping(value="/signup")
 	public String custAndPartner() {
-		return "SignUp";
+		return "customerSignUpForm";
 	}
 	
 	@RequestMapping(value="/signupform")
@@ -67,6 +67,11 @@ public class UserController {
 			System.out.println("회원가입 실패");
 		mav.setViewName("main");
 		return mav;
+	}
+	
+	@RequestMapping(value="/logout")
+	public String logout() {
+		return "index";
 	}
 
 //	@RequestMapping(value="/customerSignUpComplete")

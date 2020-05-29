@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %> 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html class="no-js" lang="">
@@ -30,8 +31,21 @@
 					<ul class="primary-nav">
 						<li><a href="/opalproject/about">OPAL이란</a></li>
 						<li><a href="/opalproject/team">팀 소개</a></li>
-						<li><a href="/opalproject/customLogin">로그인</a></li>
-						<li><a href="/opalproject/signup">회원가입</a></li>
+						<!-- 로그인중이 아닐 때에만 Login 버튼이 보임  -> taglib ( security/tags ) 때문에 가능 --> 
+						<sec:authorize access="isAnonymous()">
+							<li><a href='${pageContext.request.contextPath}/signin'>로그인</a></li>
+							<li><a href="/opalproject/signup">회원가입</a></li>
+						</sec:authorize>
+						<!-- 로그인 중일 경우에만 Logout 버튼이보임  -->
+						<sec:authorize access="isAuthenticated()">
+							<li><form action="${pageContext.request.contextPath}/logout"
+									method="POST">
+									<input id="logoutBtn" type="submit" value="Logout" /> <input
+										type="hidden" name="${_csrf.parameterName}"
+										value="${_csrf.token}">
+								</form>
+							</li>
+						</sec:authorize>
 					</ul>
 				</nav>
 				<a href="#" class="nav-toggle">Menu<span></span></a>

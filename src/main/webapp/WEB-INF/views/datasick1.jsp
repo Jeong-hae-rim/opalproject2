@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 
@@ -96,7 +98,8 @@
 							style="padding-right: 4rem;" href="#">식단추천</a></li>
 						<li class="nav-item2"><a class="nav-link"
 							style="padding-right: 4rem;" href="#">정기결제</a></li>
-							    <li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goodsInsertForm">상품등록</a></li>
+						<li class="nav-item2"><a class="nav-link"
+							style="padding-right: 4rem;" href="/opalproject/goodsInsertForm">상품등록</a></li>
 					</ul>
 				</div>
 			</div>
@@ -109,7 +112,10 @@
 		<!-- Main Controller 내부에 존재하는 datamain 메서드. -->
 		<!-- 길어진다면 메서드를 분할해가 사용해도 된다. -->
 		<!-- 20200514 jung 질병 데이터 페이지 구성 -->
-		<h4 class="textcenter">다른 <span style="color: #8cd790">질병명</span><span style="color: #333030">을 선택하시려면 버튼을 눌러주세요.</h4>
+		<h4 class="textcenter">
+			다른 <span style="color: #8cd790">질병명</span><span
+				style="color: #333030">을 선택하시려면 버튼을 눌러주세요.
+		</h4>
 		<br>
 		<!-- 2020 05 14 희정 다른 질병으로 가는 버튼 추가  -->
 		<div class="cont_opt1">
@@ -123,19 +129,20 @@
 		</div>
 		<br> <br>
 
-		
-		
+
+
 		<!-- 2020 05 20 희정 급성기관지염 질병 관련 설명 시작-->
 		<div class="titlewrap">
-		<div class="title">
+			<div class="title">
 				<h1>급성기관지염</h1>
 			</div>
 		</div>
 		<div class="boxwrap">
-		<img src="resources/img/sickimg1.jpg"> <br><br>
+			<img src="resources/img/sickimg1.jpg"> <br>
+			<br>
 		</div>
 		<div class="boxwrap2">
-		<b>질환명: [한글명] 급성 기관지염 [영문명] Acute bronchitis</b> <br> <b><img
+			<b>질환명: [한글명] 급성 기관지염 [영문명] Acute bronchitis</b> <br> <b><img
 				class="dlistimg" src="resources/img/listbox.png"> &nbsp;정의</b>
 			<div class="greycol">급성 기관지염은 기관 및 기관지 점막의 염증으로 점액이 많아지는 질환입니다.
 				주로 소아에게 발생합니다.</div>
@@ -152,13 +159,13 @@
 		</div>
 		<!-- 2020 05 20 희정 급성기관지염 질병 관련 설명 끝-->
 		<div class="titlewrap">
-		<div class="title">
+			<div class="title">
 				<h2>감기/기관지에 좋은 음식에 대한 데이터 분석 결과</h2>
 			</div>
 		</div>
-		
+
 		<!-- 2020 05 20 희정 급성기관지염 질병 관련 설명 끝-->
-		
+
 		<!-- 2020 05 18 희정 워드클라우드 출력부분 시작  -->
 		<div id="htmlwidget_container" class="wordcloud">
 			<div class="wordcloud2">
@@ -170,16 +177,19 @@
 			data-for="htmlwidget-8be566e406ab381ca717">{"x":{"word":["도라지","차","비타민","배","생강","즙","물","과일","무","청","마늘","레몬","수세미","약재","천연","당근","사포닌","콩나물","하루","꿀","대파","더덕","삼","약용식물","오메가","한방","껍질","대추","약초","홍삼","귤","도라지배즙","모과","양파","오미자","미네랄","민들레","설탕","연근","영양소","자연","채소","토마토","항산화","계란","식혜","인삼","칼슘","콩","폴리스","고구마","고등어","단백질","배즙","버섯","블루베리","올리브","호두","호박"],"freq":[98,72,55,53,45,31,26,21,16,16,14,11,11,11,11,10,10,10,10,9,9,9,9,9,9,9,8,8,8,8,7,7,7,7,7,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4],"fontFamily":"Yang Rounded","fontWeight":"bold","color":"random-light","minSize":0,"weightFactor":1.83673469387755,"backgroundColor":"black","gridSize":0,"minRotation":-0.523598775598299,"maxRotation":-0.523598775598299,"shuffle":true,"rotateRatio":1,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 		<script type="application/htmlwidget-sizing"
 			data-for="htmlwidget-8be566e406ab381ca717"> {"viewer":{"width":1,"height":1,"padding":0,"fill":true}}</script>
-		<!-- 2020 05 18 희정 워드클라우드 출력부분 끝  -->	
-		
+		<!-- 2020 05 18 희정 워드클라우드 출력부분 끝  -->
+
 		<div class="titlewrap">
-		<div class="title2">
-				<h5>:: 감기/ 기관지에 좋은 음식에 관한 텍스트를 분석한 결과 :: <br> 도라지, 배, 생강, 무, 마늘 감기/기관지에 좋다는 결과가 나왔습니다.</h5>
+			<div class="title2">
+				<h5>
+					:: 감기/ 기관지에 좋은 음식에 관한 텍스트를 분석한 결과 :: <br> 도라지, 배, 생강, 무, 마늘
+					감기/기관지에 좋다는 결과가 나왔습니다.
+				</h5>
 			</div>
 		</div>
-		
-		 <br>
-	
+
+		<br>
+
 		<div class="cont opt1">
 			<script>
 				var food = new Array('감기/기관지', '도라지', '배', '생강', '무', '마늘');
@@ -196,14 +206,17 @@
 				}
 			</script>
 		</div>
-		
-		
+
+
 		<!-- 20200519 -->
 		<div class="textcenter">
 			<h4 id=changeword>도라지에 대한 영양성분 데이터</h4>
 			<img class="fooddata" id="changeimg1" src='resources/img/food11.png'>
 			<br> <br>
-			<h5>다른 음식에 대한 <span style="color: #8cd790">영양정보</span><span style="color: #333030">를 확인하시려면 아래 버튼을 눌러주세요.</h5>
+			<h5>
+				다른 음식에 대한 <span style="color: #8cd790">영양정보</span><span
+					style="color: #333030">를 확인하시려면 아래 버튼을 눌러주세요.
+			</h5>
 			<br> <br>
 			<button class="changeimg" onclick="changeimg(1)">도라지</button>
 			&nbsp;&nbsp;&nbsp;

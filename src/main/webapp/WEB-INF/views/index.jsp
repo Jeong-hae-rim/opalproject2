@@ -1,5 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <html class="no-js" lang="">
@@ -33,24 +35,47 @@
 		});
 	});
 </script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#nav ul.sub-menu").hide();
+		$("#nav ul#main-menu li").click(function() {
+			$("ul", this).slideToggle("fast");
+		});
+	});
+</script>
 
 </head>
 <body>
 	<section class="banner" role="banner">
 		<header id="header">
-			<div class="header-content clearfix">
-				<a class="logo" href="/opalproject/index"><img src="resources/images/Opal.png"
-					width="100" alt=""></a>
-				<nav class="navigation" role="navigation">
-					<ul class="primary-nav">
-						<li><a href="/opalproject/about">OPAL이란</a></li>
-						<li><a href="/opalproject/team">팀 소개</a></li>
-						<li><a href="/opalproject/customLogin">로그인</a></li>
-						<li><a href="/opalproject/signup">회원가입</a></li>
-					</ul>
-				</nav>
-				<a href="#" class="nav-toggle">Menu<span></span></a>
-			</div>
+		<div id="nav" class="header-content clearfix">
+		<a class="logo" href="/opalproject/index">
+				   <img src="resources/images/Opal.png" width="100" alt=""></a>
+		<nav class="navigation" role="navigation">	
+			<ul id = "main-menu" class="primary-nav">
+			  <li><a href="#">오팔이란</a></li>
+			  <li><a href="#">팀소개</a></li>
+			  <!-- 로그인중이 아닐 때에만 Login 버튼이 보임  -> taglib ( security/tags ) 때문에 가능 -->
+			<sec:authorize access="isAnonymous()">
+			  <li><a href='${pageContext.request.contextPath}/signin'>로그인</a></li>
+			  <li><a href="/opalproject/signup">회원가입</a></li>
+			</sec:authorize>
+			<sec:authorize access="isAuthenticated()">
+			  <li><a href="#">회원정보</a>
+			     <ul id="sub-menu">
+			        <li><a href="#">내 질병 분석 보기</a></li>
+			        <li><a href="#">회원정보 수정</a></li>
+			     </ul>
+			  <li><form action="${pageContext.request.contextPath}/logout" method="POST">
+				  <input id="logoutBtn" class="logout_button" type="submit" value="Logout" />
+				  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+				  </form></li>
+			</sec:authorize>
+			</ul>
+			</nav>
+			<a href="#" class="nav-toggle">Menu<span></span></a>
+		</div>
 			<!-- header content -->
 		</header>
 		<!-- header -->
@@ -205,8 +230,8 @@
 				</div>
 			</div>
 			<div class="submit_wrap">
-			<input type="submit" value="확인" class="check_sumit" >
-			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+				<input type="submit" value="확인" class="check_sumit"> <input
+					type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 			</div>
 		</form>
 		<h3 class="h3_sick">관심있는 질병의 버튼을 누르신 후 확인 버튼을 눌러주세요.</h3>

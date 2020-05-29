@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
     <%@ page import="java.util.ArrayList" %>
       <%@ page import="model.vo.SickfoodVO" %>
       <%@ page import="java.util.List" %>
