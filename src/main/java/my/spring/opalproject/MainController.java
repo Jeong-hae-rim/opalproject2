@@ -40,11 +40,7 @@ public class MainController {
 	}
 	// 질병DATA 컨트롤러 -- 클래스 분할해서 사용해도 됨
 
-	@RequestMapping(value = "/goods")
-	public String goods() {
 
-		return "goods";
-	}
 	// 농산물구매 컨트롤러 -- 클래스 분할해서 사용해도 됨
 
 	@RequestMapping(value = "/markets")

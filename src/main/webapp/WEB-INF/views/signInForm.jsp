@@ -31,33 +31,42 @@
 	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
 	rel="stylesheet">
 <link href="resources/ourcss/customLogin.css" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#nav ul#sub-menu").hide();
+		$("#nav ul#main-menu li").click(function() {
+			$("ul", this).slideToggle("fast");
+		});
+	});
+</script>
 </head>
-
 <body>
-<section class="banner" role="banner">
+	<section class="banner" role="banner">
 		<header id="header">
-			<div class="header-content clearfix">
-				<a class="logo" href="/opalproject/index"><img
+			<div id="nav" class="header-content clearfix">
+				<a class="logo" href="/opalproject/index"> <img
 					src="resources/images/Opal.png" width="100" alt=""></a>
 				<nav class="navigation" role="navigation">
-					<ul class="primary-nav">
-						<li><a href="/opalproject/about">OPAL이란</a></li>
-						<li><a href="/opalproject/team">팀 소개</a></li>
-						<!-- 로그인중이 아닐 때에만 Login 버튼이 보임  -> taglib ( security/tags ) 때문에 가능 --> 
+					<ul id="main-menu" class="primary-nav">
+						<li><a href="/opalproject/about">오팔이란</a></li>
+						<li><a href="/opalproject/team">팀소개</a></li>
+						<!-- 로그인중이 아닐 때에만 Login 버튼이 보임  -> taglib ( security/tags ) 때문에 가능 -->
 						<sec:authorize access="isAnonymous()">
 							<li><a href='${pageContext.request.contextPath}/signin'>로그인</a></li>
 							<li><a href="/opalproject/signup">회원가입</a></li>
 						</sec:authorize>
-						<!-- 로그인 중일 경우에만 Logout 버튼이보임  -->
 						<sec:authorize access="isAuthenticated()">
-							<li><form action="${pageContext.request.contextPath}/logout"
-									method="POST">
-									<input id="logoutBtn" type="submit" value="Logout" /> <input
-										type="hidden" name="${_csrf.parameterName}"
-										value="${_csrf.token}">
-								</form>
-							</li>
+							<li><a href="#">회원정보</a>
+								<ul id="sub-menu">
+									<li><a href="#">내 질병 분석 보기</a></li>
+									<li><a href="/opalproject/meminfomodify">회원정보 수정</a></li>
+									<li><a href="/opalproject/cart/list">장바구니</a></li>
+								</ul>
+							<li><form action="${pageContext.request.contextPath}/logout" method="POST">
+									<input id="logoutBtn" class="logout_button" type="submit" value="로그아웃" /> 
+									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+								</form></li>
 						</sec:authorize>
 					</ul>
 				</nav>
@@ -66,14 +75,23 @@
 			<!-- header content -->
 		</header>
 		<!-- header -->
+		<div class="container">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="banner-text text-center">
+					<p>movie here</p>
+				</div>
+				<!-- banner text -->
+			</div>
+		</div>
 	</section>
 	<!-- banner -->
+	
+	
    <section id="customLogin">
       <div class="login_card">
          <div id="card_feagure">
             <div class="card-header">
-               <img src="resources/images/Opal.png" width=200 alt
-                     class="default_logo">
+               <img src="resources/images/Opal.png" width=200 alt class="default_logo">
             </div>
             <div class="card-body">
 				<form method='post' action="/opalproject/index">
@@ -83,12 +101,12 @@
 					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 				</form>
 
-					<div class="en">
+			<div class="en">
                <a href="/opalproject/signup">회원가입</a> 
                <span> | </span> 
                <a href="/opalproject/entrance">비밀번호/아이디찾기</a>
-               </div>
             </div>
+           </div>
          </div>
       </div>
    </section>

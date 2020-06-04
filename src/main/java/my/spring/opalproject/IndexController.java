@@ -18,5 +18,11 @@ public class IndexController {
 		return "mypage";
 	}
 	
+	@RequestMapping(value="/meminfomodify")
+	public String meminfomodify() {
+		
+		return "memInfoModify";
+	}
+	
 
 }

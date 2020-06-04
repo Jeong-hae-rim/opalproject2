@@ -37,3 +37,37 @@ span {
 	margin-top : 50px;
 	text-align : center;
 }
+
+.btn{
+	background-color: #86B404;
+}
+.banner {
+	background-image: url(../images/food_blue.PNG);
+	background-position: center top;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 300px;
+}
+
+.banner-text {
+	padding-top: 25%;
+}
+
+.banner-text h1 {
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom:50px;
+}
+
+.banner-text p {
+	color: #fff;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 80px;
+}

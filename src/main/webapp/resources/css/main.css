@@ -1,9 +1,12 @@
-@import
+/* @import
 	url(http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700)
 	;
 
 @import
 	url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+ */
+@import
+     url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -21,6 +24,7 @@ h1 {
 h2 {
 	font-size: 40px;
 	color: #2d3033;
+	font-family : Noto Sans KR', sans-serif;
 }
 
 h3 {
@@ -1285,7 +1289,7 @@ position : absolute;
 }
 
 .check_sumit {
-	background-color: #04B431;
+	background-color: #86B404;
 	border: none;
 	color: white;
 	padding: 10px 30px;
@@ -1298,10 +1302,33 @@ position : absolute;
 	font-size: 30px;
 }
 
+.check_sumit {
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+
+  transition-duration: 0.4s;
+
+}
+
+.check_sumit:hover, .check_sumit:focus {
+	background-color: #312f4a;
+	color: #fff;
+}
+
 .logout_button {
 	background-color: #312f4a;
 	margin-left: 40px;
 	border: none;
 	color: white;
+	font-weight:bold;
+	font-family: "Raleway", sans-serif;
 }
 
+.logout_button:focus{
+	outline:none;
+}
+
+
+.logo{
+	width:150px;
+}

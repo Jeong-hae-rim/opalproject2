@@ -42,7 +42,7 @@ input {
 }
 
 .login_button {
-	background-color: #04B431;
+	background-color: #86B404;
 	border: none;
 	color: white;
 	padding: 10px 30px;
@@ -61,7 +61,7 @@ input {
 
 .login_button:hover {
 
-  background: #088A08; 
+  background: #312f4a; 
 
   color: white;
 
@@ -75,4 +75,35 @@ input {
 
 a {
 	padding:10px;
+}
+
+.banner {
+	background-image: url(../images/food_blue.PNG);
+	background-position: center top;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 300px;
+}
+
+.banner-text {
+	padding-top: 25%;
+}
+
+.banner-text h1 {
+	color: #fff;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom:50px;
+}
+
+.banner-text p {
+	color: #fff;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 80px;
 }

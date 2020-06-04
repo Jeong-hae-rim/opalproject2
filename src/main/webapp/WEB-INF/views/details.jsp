@@ -1,100 +1,164 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page session="false"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta>
-<title>소개</title>
 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="java.util.List,model.vo.GoodsVO"%>
+
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+<meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link rel="stylesheet" href="resources/journal/bootstrap.css"
-	media="screen">
-<link rel="stylesheet" href="resources/_assets/css/custom.min.css">
-<link rel="stylesheet" href="resources/ourcss/main.css">
+<title>OPAL :: 상품 상세</title>
+<link rel="icon" type="image/png" sizes="32x32"
+	href="/opalproject/resources/images/Opal.png">
+<link rel="stylesheet"
+	href="/opalproject/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="/opalproject/resources/css/flexslider.css">
+<link rel="stylesheet"
+	href="/opalproject/resources/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/opalproject/resources/css/main.css">
+<link rel="stylesheet" href="/opalproject/resources/ourcss/details.css">
+<link rel="stylesheet" href="/opalproject/resources/css/responsive.css">
+<link rel="stylesheet" href="/opalproject/resources/css/animate.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+	rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#nav ul#sub-menu").hide();
+		$("#nav ul#main-menu li").click(function() {
+			$("ul", this).slideToggle("fast");
+		});
+	});
+</script>
 
 </head>
 <body>
-	<header>
-		<div class="header_wrap">
-			<div class="logo">
-			  <a href="/opalproject/main">
-				<h1>
-					<img src="resources/images/Opal.png" width=150 alt class="default_logo">
-				</h1>
-			  </a>
-			</div>
 
-			<div class="top_nav">
-				<div class="top_ul">
-					<div class="bs-component1">
-						<nav class="navbar navbar-expand-lg navbar-light bg-light">
-							<button class="navbar-toggler" type="button"
-								data-toggle="collapse" data-target="#navbarColor03"
-								aria-controls="navbarColor03" aria-expanded="false"
-								aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-
-							<div class="collapse navbar-collapse" id="navbarColor03">
-								<ul class="navbar-nav mr-auto">
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">로그인</a></li>
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">회원가입</a></li>
-									<li class="nav-item"><a class="nav-link" style="font-size: 12px;" href="#">고객센터</a></li>
+	<section class="banner" role="banner">
+		<header id="header">
+			<div id="nav" class="header-content clearfix">
+				<a class="logo" href="/opalproject/index"> 
+				   <img src="/opalproject/resources/images/Opal.png" width="100" alt=""></a>
+				<nav class="navigation" role="navigation">
+					<ul id="main-menu" class="primary-nav">
+						<li><a href="/opalproject/about">오팔이란</a></li>
+						<li><a href="/opalproject/team">팀소개</a></li>
+						<!-- 로그인중이 아닐 때에만 Login 버튼이 보임  -> taglib ( security/tags ) 때문에 가능 -->
+						<sec:authorize access="isAnonymous()">
+							<li><a href='${pageContext.request.contextPath}/signin'>로그인</a></li>
+							<li><a href="/opalproject/signup">회원가입</a></li>
+						</sec:authorize>
+						<sec:authorize access="isAuthenticated()">
+							<li><a href="#">회원정보</a>
+								<ul id="sub-menu">
+									<li><a href="#">내 질병 분석 보기</a></li>
+									<li><a href="/opalproject/meminfomodify">회원정보 수정</a></li>
+									<li><a href="/opalproject/cart/list">장바구니</a></li>
 								</ul>
-							</div>
-						</nav>
-					</div>
+							<li><form action="${pageContext.request.contextPath}/logout" method="POST">
+									<input id="logoutBtn" class="logout_button" type="submit" value="로그아웃" /> 
+									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+								</form>
+							</li>
+						</sec:authorize>
+					</ul>
+				</nav>
+				<a href="#" class="nav-toggle">Menu<span></span></a>
+			</div>
+			<!-- header content -->
+		</header>
+		<!-- header -->
+	</section>
+	<!-- banner -->
+	<section id="customLogin">
+		<!-- 20200513-->
+
+
+		<%
+			List<GoodsVO> list = (List<GoodsVO>) request.getAttribute("list");
+			//System.out.print("리스트 출력" + list);
+			GoodsVO listOne = (GoodsVO) request.getAttribute("listOne");
+			System.out.print("리스트 출력" + listOne);
+		%>
+		<div id="read">
+			<div class="product">
+				<input type="hidden" name="product_cd" value="${ listOne.product_cd }">
+				<div class="product_img">
+					<img src="/opalproject/resources/imgp/<%=listOne.getProduct_url()%>.PNG">
+				</div>
+				<div class="product_content">
+					<span id="name" name="name"><%=listOne.getProduct_name()%></span><br>
+					<div contenteditable="true" id="content" name="content"><%=listOne.getProduct_content()%></div>
+					<br>
+					<table>
+						<tr>
+							<td class="tit">가격</td><td id="price" class="desc" name="price"><%=listOne.getProduct_price()%>원</td>
+						</tr>
+						<tr>
+							<td class="tit">중량/용량</td><td id="su" class="desc" name="su"><%=listOne.getProduct_su()%>g</td>
+						</tr>
+						<tr>
+							<td class="tit">수량</td><td class="desc"><form name="form1" method="POST" action="/opalproject/cart/insert">
+									<input type="hidden" name="product_name" value="<%=listOne.getProduct_name()%>"> 
+									<input type="hidden" name="money" value=" <%=listOne.getProduct_price()%>"> 
+									<input type="hidden" name="product_cd" value="${ listOne.product_cd}">
+									<select name="cart_amount">
+										<c:forEach begin="1" end="20" var="i">
+							                       구매수량 <option value="${i}">${i}</option>
+										</c:forEach>
+									</select></td>
+						</tr>
+					</table>
+				</div>
+				<div class="product_input">
+					<input type="submit" class="btn_input" value="장바구니에 담기"> 
+					<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+					</form>
+					<button class="btn_back" onclick="location.href='/opalproject/goods'">상품목록</button>
 				</div>
 			</div>
-	</header>
-	<!--header 끝-->
+		</div>
 
-	<div class="bs-component2">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarColor03" aria-controls="navbarColor03"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<!--건드리지 마세요.-->
 
-			<div class="collapse navbar-collapse" id="navbarColor03" style="height:100px">
-			   <div class="navbar-nav2">
-			   <ul class="navbar-nav mr-auto">
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/about">소개</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/datamain">질병DATA</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/goods">농산물구매</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="/opalproject/markets">농가별구매</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">레시피</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">식단추천</a></li>
-					<li class="nav-item2"><a class="nav-link" style="padding-right: 4rem;" href="#">정기결제</a></li>
-				</ul></div>
-			</div>
-		</nav>
-	</div>
-	<hr>
-	<br>
-	<!--main navbar 끝-->
-	
-	<section>
-	<!-- 여기에 만든 컨텐츠를 넣으면 될 것 같다. -->
-	<!-- Main Controller 내부에 존재하는 datamain 메서드. -->
-	<!-- 길어진다면 메서드를 분할해가 사용해도 된다. -->
 	</section>
-	
-	<footer>
-		<h3>홈페이지 정보(바닥 글)</h3>
+
+
+	<footer class="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="footer-col col-md-4"></div>
+					<div class="footer-col col-md-4">
+						<img src="/opalproject/resources/images/Opal.png" width="150"
+							alt="">
+						<h5>with Health</h5>
+					</div>
+					<div class="footer-col col-md-4"></div>
+				</div>
+			</div>
+		</div>
 	</footer>
-	<!--footer 끝-->
-	
+	<!-- footer -->
 </body>
-<script src="resources/_vendor/jquery/dist/jquery.min.js"></script>
-<script src="resources/_vendor/popper.js/dist/umd/popper.min.js"></script>
-<script src="resources/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="resources/_assets/js/custom.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	window.jQuery
+			|| document
+					.write('<script src="/opalproject/resources/js/jquery.min.js"><\/script>')
+</script>
+<script src="/opalproject/resources/js/bootstrap.min.js"></script>
+<script src="/opalproject/resources/js/jquery.flexslider-min.js"></script>
+<script src="/opalproject/resources/js/jquery.fancybox.pack.js"></script>
+<script src="/opalproject/resources/js/jquery.waypoints.min.js"></script>
+<script src="/opalproject/resources/js/retina.min.js"></script>
+<script src="/opalproject/resources/js/modernizr.js"></script>
+<script src="/opalproject/resources/js/main.js"></script>
 </html>
